@@ -7,7 +7,7 @@ This repository documents the Human Action Classification Project, which aims to
 We use YOLOv11-small as our base model, trained on the dataset from the Pose Counting Repetition Computer Vision Project. Dataset: https://universe.roboflow.com/lftnnisa/pose-counting-repetition
 
 
-The training process is handled by src/train.py, which:
+The training process is handled by `src/train.py`, which:
 - Loads a pretrained YOLOv11s model.
 - Fine-tunes it on the the human action dataset.
   <img width="670" alt="image" src="https://github.com/user-attachments/assets/eb7f715d-c594-4cf9-8176-c913437579fe" />
@@ -15,7 +15,7 @@ The training process is handled by src/train.py, which:
 # Prune and quantization
 Once training is complete, the model is pruned and quantized to optimize it for edge deployment. Since YOLO is a complex model in structure, we did not make many changes into the model layers, but focus more on layer pruning, more specificically convolutional layer pruning. 
 
-This is done via the notebook src/yolo_prune_quantization.ipynb, which:
+This is done via the notebook `src/yolo_prune_quantization.ipynb`, which:
 - Performs block-wise sensitivity analysis to help determine appropriate pruning ratios per block
   <img width="629" alt="image" src="https://github.com/user-attachments/assets/da57cd86-a42b-45ec-8510-f5b6d391e01b" />
   <img width="679" alt="image" src="https://github.com/user-attachments/assets/2bfc0bc0-01e0-4eeb-9b1a-3acf61540ed7" />
@@ -26,6 +26,7 @@ This is done via the notebook src/yolo_prune_quantization.ipynb, which:
   
 # Deployment on Raspberry Pi
 After pruning and quantization, the resulting ONNX model can be deployed on a Raspberry Pi. To run live inference from a camera feed, use:
+```bash
 python raspberry_pi/live_camera.py
 
 This script performs real-time human action recognition directly on the Raspberry Pi using the optimized model. Below is the screenshot of model running on Raspberry Pi.
