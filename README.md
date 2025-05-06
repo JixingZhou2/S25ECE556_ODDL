@@ -26,8 +26,7 @@ This is done via the notebook `src/yolo_prune_quantization.ipynb`, which:
   
 # Deployment on Raspberry Pi
 After pruning and quantization, the resulting ONNX model can be deployed on a Raspberry Pi. To run live inference from a camera feed, use:
-```bash
-python raspberry_pi/live_camera.py
+`python raspberry_pi/live_camera.py`
 
 This script performs real-time human action recognition directly on the Raspberry Pi using the optimized model. Below is the screenshot of model running on Raspberry Pi.
 <img width="837" alt="image" src="https://github.com/user-attachments/assets/a71c449d-e40b-4de0-9f63-6acdd082a8f8" />
