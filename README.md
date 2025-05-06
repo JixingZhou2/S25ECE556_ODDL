@@ -4,7 +4,8 @@ This repository documents the Human Action Classification Project, which aims to
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/eb9a4517-6e79-444b-926b-72c21318a3fe" />
 
 # Model and training
-We use YOLOv11-small as our base model, trained on the dataset from the Pose Counting Repetition Computer Vision Project. 
+We use YOLOv11-small as our base model, trained on the dataset from the Pose Counting Repetition Computer Vision Project. Dataset: https://universe.roboflow.com/lftnnisa/pose-counting-repetition
+
 
 The training process is handled by src/train.py, which:
 - Loads a pretrained YOLOv11s model.
